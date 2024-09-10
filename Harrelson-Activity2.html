@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 
 <html lang="en">
+	<style>
+		figure {
+			border: 1px solid black;
+			padding: 4px;
+			margin: auto;
+		} figcaption {
+			background-color: white;
+			color: black;
+			padding: 2px;
+			text-align: center;
+		}
+	</style>
+	<figure>
+		<figcaption>Employee Table</figcaption>
+	</figure>
 	<head>
 		<title>Employee table</title>
 		<meta name="description" content="3135 Activity">
@@ -12,13 +27,22 @@
 	<table>
 		<thead>
 			<tr>
-				<th>
+				<th>Department</th>
 				<th>Name</th>
 				<th>E-mail</th>
 				<th class="right">Years of Service</th>
 			</tr>
 		</thead>
 		<tbody>
+			<tr>
+				<td rowspan="2">Editorial</td>
+			</tr>
+			<tr>
+				<td rowspan="3">Marketing</td>
+			</tr>
+			<tr>
+				<td rowspan="2">Customer Service</td>
+			</tr>
 			<tr>
 				<td>Joel Murach</td>
 				<td>joelmurach@yahoo.com</td>
@@ -53,6 +77,10 @@
 				<td>Juliette Baylon</td>
 				<td>juliette@murach.com</td>
 				<td class="right">1</td>
+			</tr>
+			<tr>
+				<td colspan="3" class="right">Total Years of Service</td>
+				<td class="right">105</td>
 			</tr>
 		</tbody>
 	</table>
