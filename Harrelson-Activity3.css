@@ -1,6 +1,6 @@
-address {
-  background-color: text;
+#address {
+  background-color: #f178a1;
 }
-header, footer {
-  background-color: text;
+.background-color {
+  background-color: #ea3473;
 }
