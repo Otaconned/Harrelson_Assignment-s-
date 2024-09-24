@@ -1,3 +1,4 @@
+
 :root {
     --accent-color: #FF3B3F;
     --accent-dark-color: #EF2B2F;
@@ -75,12 +76,6 @@
  .feature a {
     text-decoration: none;  
  }
-
-.feature-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
  
  @keyframes lowerAd {
     from { top: -80px; }   
@@ -159,5 +154,3 @@
  button:hover {
     background-color: var(--accent-dark-color);   
  }
- 
- 
