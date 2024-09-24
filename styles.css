@@ -71,11 +71,31 @@
     background: white;
     padding: 2px 15px;
     margin: 10px 0;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
  }
- 
+
+.flex-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ .feature-right {
+     margin-left: 20px;
+ }
+
  .feature a {
     text-decoration: none;  
  }
+
+.feature img {
+    max-width: 200px;
+    border-radius: 8px;
+}
+
+
  
  @keyframes lowerAd {
     from { top: -80px; }   
