@@ -75,6 +75,12 @@
  .feature a {
     text-decoration: none;  
  }
+
+.feature-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
  
  @keyframes lowerAd {
     from { top: -80px; }   
