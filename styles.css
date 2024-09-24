@@ -91,8 +91,8 @@
  }
 
 .feature img {
-    max-width: 100px;
-    border-radius: 8px;
+    max-width: 200px;
+    border-radius: 10px;
 }
 
 .feature h2 {
@@ -100,8 +100,6 @@
     align-items: center;
     justify-content: space-between;
 }
-
-
  
  @keyframes lowerAd {
     from { top: -80px; }   
