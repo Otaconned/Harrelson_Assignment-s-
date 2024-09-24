@@ -83,6 +83,7 @@
 }
 
  .feature-right {
+     flex-direction: column;
      margin-left: 20px;
  }
 
