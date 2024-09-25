@@ -72,18 +72,17 @@
     padding: 2px 15px;
     margin: 10px 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
  }
 
 .flex-container{
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
  .feature-right {
-     flex-direction: column;
      margin-left: 20px;
  }
 
