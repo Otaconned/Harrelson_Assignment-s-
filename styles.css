@@ -103,7 +103,7 @@
  
  @keyframes lowerAd {
     from { top: -80px; }   
-    to { top: 350px; }
+    to { top: 300px; }
  }
  
  #advertisement {
@@ -112,8 +112,8 @@
     animation-delay: 2s;
     animation-fill-mode: forwards;      
     position: fixed;
-    left: 650px;
-    top: -65px;
+    left: 750px;
+    top: -80px;
     width: 100px;
     background: linear-gradient(lightgreen, white);
     box-shadow: 5px 5px;
