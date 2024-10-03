@@ -7,18 +7,19 @@ document.addEventListener("DOMContentLoaded", function () {
     $("show_results").addEventListener("click", showResults);
     $("add").addEventListener("click", addHeight);
     $("display_height").addEventListener("click", displayHeight);
+    $('name').focus();
 });
 
-function showResults(names, height) {
+function showResults() {
     let sum = 0;
     for (let i = 0; i < height.length; i++) {
-        sum += parseInt(height[i]);
+        sum += height[i];
     }
-    let average = sum/height.length;
+    let average = Math.ceil(sum/height.length);
 
     let highest = height[0];
     let tallest = 0;
-    for (let i = 0; i < height.length, i++){
+    for (let i = 0; i < height.length; i++){
         if (height[i] > highest) {
             highest = height[i];
             tallest = i;
@@ -26,29 +27,57 @@ function showResults(names, height) {
     }
 
     let tallestName = names[tallest];
-    document.getElementById("result").innerHTML = "<h2>Results</h2><br><p>Average Height = " + average + "<br>Highest height = " + tallestName + "with a height of " + highest + "</p>";
+    $("result").innerHTML = "<h2>Results</h2><p>Average Height = " + average + "<br>Highest height = " + tallestName + " with a height of " + highest + "</p>";
 }
 
-function addHeight(names, height) {
-    let nameInput = $("name");
-    let heightInput = $("height");
+function addHeight() {
+    let nameInput = $("name").value;
+    let heightInput = $("height").value;
 
-    if (nameInput == "" || isNaN(heightInput) || heightInput <= 0 || heightInput > 100) {
+    if (nameInput == "" || isNaN(heightInput) || heightInput < 0 || heightInput > 100) {
         alert("You must enter a name and a valid height");
-        nameInput.focus();
+        $('name').focus();
+        return;
     }
     names.push(nameInput);
     height.push(parseFloat(heightInput));
 
-    nameInput.focus();
+    $('name').value="";
+    $('height').value="";
+    $('name').focus();
 }
 
-function displayHeight(names, height) {
-    let table = "<table border="1"><tr>";
+function displayHeight() {
+    let table = $("height_table");
+    table.innerHTML = "";
+
+    let tableHeader = document.createElement("h2");
+    tableHeader.textContent = "Heights";
+    table.appendChild(tableHeader);
+
+    let headerRow = document.createElement("tr");
+
+    let nameHeader = document.createElement("th");
+    nameHeader.textContent="Name";
+    headerRow.appendChild(nameHeader);
+
+    let heightHeader = document.createElement("th");
+    heightHeader.textContent="Height";
+    headerRow.appendChild(heightHeader);
+
+    table.appendChild(headerRow);
 
     for (let i = 0; i < names.length; i++){
-        table += "<tr>";
-        for (let j = 0; j < names[i]
-        
+        let row = document.createElement("tr");
+
+        let nameColumn = document.createElement("td");
+        nameColumn.textContent = names[i];
+        row.appendChild(nameColumn);
+
+        let heightColumn = document.createElement("td");
+        heightColumn.textContent = height[i];
+        row.appendChild(heightColumn);
+
+        table.appendChild(row);  
     }
 }
