@@ -32,6 +32,9 @@ input {
 p {
 	margin: 0;
 }
+th{
+    text-align: left;
+}
 td {
 	width: 10em;
 }
